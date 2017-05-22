@@ -1,0 +1,69 @@
+* {
+	box-sizing: border-box;
+}
+
+img {
+	width: 4em;
+}
+
+.jumbotron {
+	padding: 1em;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+#imgs {
+	padding-left: 3em;
+}
+
+
+footer {
+	background-color: darkgrey;
+	height: 3em;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: right;
+}
+
+footer h5 {
+	padding-right: 3em;
+}
+
+#playerOneBox, #playerTwoBox, #gameBox {
+	outline: black solid 1px;
+}
+
+#playerBoxes {
+	outline: none;
+}
+
+.rpsBtn {
+	width: 40px
+}
+
+.btn {
+	padding: 5px 5px;
+}
+
+#playerBoxes {
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#form {
+	text-align: center;
+	padding: 1em 0;
+	background-color: #D3D3D3;
+	margin-bottom: 2em;
+
+}
+#nameInfo{
+	padding-right: 2em;
+}

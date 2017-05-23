@@ -34,9 +34,9 @@
 					<p>Name: <span id="playerOneName"></span></p>
 					<p>Wins: <span id="playerOneWins"></span></p>
 					<div class="btn-group" role="group">
-						<button class="btn btn-default imgBtn" id="rock1" type="button" value="rock"><img src="rock.png" class="rpsBtn"></button>
-						<button class="btn btn-default imgBtn" id="paper1" type="button" value="paper"><img src="paper.png" class="rpsBtn"></button>
-						<button class="btn btn-default imgBtn" id="scissors1" type="button" value="scissors"><img src="scissors.png" class="rpsBtn"></button>
+						<button class="btn btn-default imgBtn imgBtn1" id="rock1" type="button" value="rock"><img src="rock.png" class="rpsBtn"></button>
+						<button class="btn btn-default imgBtn imgBtn1" id="paper1" type="button" value="paper"><img src="paper.png" class="rpsBtn"></button>
+						<button class="btn btn-default imgBtn imgBtn1" id="scissors1" type="button" value="scissors"><img src="scissors.png" class="rpsBtn"></button>
 					</div>
 				</div>
 			</div>
@@ -47,9 +47,9 @@
 					<p>Name: <span id="playerTwoName"></span></p>
 					<p>Wins: <span id="playerTwoWins"></span></p>
 					<div class="btn-group" role="group">
-						<button class="btn btn-default imgBtn" id="rock2" type="button" value="rock"><img src="rock.png" class="rpsBtn"></button>
-						<button class="btn btn-default imgBtn" id="paper2" type="button" value="paper"><img src="paper.png" class="rpsBtn"></button>
-						<button class="btn btn-default imgBtn" id="scissors2" type="button" value="scissors"><img src="scissors.png" class="rpsBtn"></button>
+						<button class="btn btn-default imgBtn imgBtn2" id="rock2" type="button" value="rock"><img src="rock.png" class="rpsBtn"></button>
+						<button class="btn btn-default imgBtn imgBtn2" id="paper2" type="button" value="paper"><img src="paper.png" class="rpsBtn"></button>
+						<button class="btn btn-default imgBtn imgBtn2" id="scissors2" type="button" value="scissors"><img src="scissors.png" class="rpsBtn"></button>
 					</div>
 				</div>
 			</div>
@@ -57,6 +57,10 @@
 
 	<div class="panel panel-default col-lg-8 col-md-8 col-sm-8 col-xs-12" id="gameBox">
 		<div class="panel-body">
+			<div id="player1choice" class="choiceImg"></div>
+			<div id="player2choice"></div>
+
+			<h3><span id="results"></span></h3>
 		</div>
 	</div>
 </div>	
@@ -64,6 +68,7 @@
 <footer>
 	<h5>Chat with your competitor!<h5>
 </footer>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
 <script src="rps.js"></script>

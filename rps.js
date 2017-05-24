@@ -11,21 +11,45 @@
 
   var database = firebase.database();
 
-//on every click, sets up a player with an unique #
-  var playerNum = 0 
+  var connectionsRef = database.ref("/connections");
+
+  var connectedRef = database.ref(".info/connected");
+
+connectedRef.on("value", function(snap) {
 
   $("#submitBtn").on("click", function() {
     event.preventDefault();
-    playerNum++;
     var submittedName = $("#name-input").val().trim();
-    console.log(submittedName); 
+  if (snap.val()) {
+    var con = connectionsRef.push({
+      name: submittedName,
+      wins: 0});
+    con.onDisconnect().remove();
+  }
+});
 
-      database.ref().push({
-        name: submittedName,
-        playerNum: playerNum
-        });
-    return playerNum;
-  });
+connectionsRef.on("value", function(snap) {
+  console.log(snap.numChildren());
+  console.log(snap.val().name);
+
+});
+
+
+
+//on every click, sets up a player with an unique #
+  // var playerOne = 0;
+
+  // var playerNum = 0;
+
+
+  //   playerNum++;
+  //  
+  //   return playerNum;
+  // });
+
+  // database.ref().on("value", function(childSnapshot) {
+  //   console.log(childSnapshot.val());
+  // });  
 
   $(".imgBtn1").on("click", function () {
     var player1choice = $(this).val();
@@ -38,6 +62,7 @@
     function erase() {
       $("#results").empty();
     }
+  });
 
    if (player1choice === player2choice) {
       $("#results").append("Tie!");
